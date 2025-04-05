@@ -22,3 +22,7 @@ ggmap(corvallis_map) + geom_point(aes(lon, lat, color = year_built), data = sale
 #map size to bedrooms
 ggmap(corvallis_map) +
   geom_point(aes(lon, lat, size = bedrooms), data = sales)
+
+#map color to price per square foot
+ggmap(corvallis_map) +
+  geom_point(aes(lon, lat, color = price / finished_squarefeet), data = sales)
